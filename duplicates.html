@@ -1,0 +1,29 @@
+
+<script>
+function duplicates(wd){
+var duplicates;
+var i=0;
+var j;
+	for ( i; i < wd.length; i++) {
+		var first=wd[i]; 
+			for (j=i+1; j < wd.length; j++) {
+				var second=wd[j];
+				if (first==second){
+					duplicates=true;
+				}
+			}
+	}
+	if(duplicates==true){
+		alert ('duplicates found');
+	} else{
+		alert ('all unique');
+	}
+}
+function ok(){
+var inp = document.getElementById('input');
+var word = inp.value;
+duplicates(word);
+}
+</script>
+Word: <input type="text" name="word" id="input"><br>
+<input type="submit" value="Invia" onclick="ok()">
